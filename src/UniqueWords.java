@@ -11,15 +11,18 @@ public class UniqueWords
    {
 	  int count = 0;
 	  
-      for (int i = 0; i < list.size(); i++)
-      {		 for (int j = 0; j < list.size(); j++)
-		 {
-			
-		 }
+     for(int i=0; i<list.size(); i++){
+      for(int y=0; y<list.size(); y++){
+        if(i==y){
+        continue;//when the same elements happen at the same time, we will skip this one
       }
-	  return count;
+      if(list.get(i).equals(list.get(y))){
+      count++;
+      }
+      }
    }
-
+      return count;
+   }
    public static void main(String[] args)
    {
       ArrayList <String> words = new ArrayList<>();
